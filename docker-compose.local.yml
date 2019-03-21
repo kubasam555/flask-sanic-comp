@@ -1,0 +1,18 @@
+version: '3'
+volumes:
+  flask_sanic_postgres:
+    external: true
+  flask_sanic_logs:
+    external: true
+
+services:
+  postgres:
+    container_name: flask_sanic_postgres
+    image: postgres:11.1
+    env_file:
+    - ./config.env
+    ports:
+    - 5432:5432
+    volumes:
+      - flask_sanic_postgres:/var/lib/postgresql/data/
+      - flask_sanic_logs:/var/log/
