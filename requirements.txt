@@ -1,3 +1,4 @@
 Flask==1.0.2
+gunicorn==19.9.0
 peewee==3.9.2
 psycopg2-binary==2.7.7
