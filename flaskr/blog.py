@@ -10,7 +10,7 @@ from flaskr.models import Post
 bp = Blueprint('blog', __name__)
 
 
-@bp.route('/posts/', methods=('POST',))
+@bp.route('/posts/', methods=('GET',))
 def posts():
     qs = Post.select()
     result = []
